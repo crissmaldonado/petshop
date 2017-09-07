@@ -1,0 +1,21 @@
+<h1>All Launchpad's Pets</h1>
+<div class="row">
+  <% @pets.each do |pet| %>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="<%= pet.image %>" alt="launchpad's pet">
+      <div class="caption">
+        <h3><%= pet.product %></h3>
+        <h3><%= pet.description %></h3>
+        <h3>Cost: <%= pet.cost %></h3>
+        <%= link_to "More Info", pet, class: "btn btn-default" %>        
+      </div>
+    </div>    
+  </div>  
+  <% end %>
+</div>
+
+<br>
+
+<%= link_to "New Pet", new_pet_path, class: "btn btn-default" %>
+Add Comment Collapse
